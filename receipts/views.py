@@ -23,12 +23,12 @@ class ReceiptCreateView(LoginRequiredMixin, CreateView):
 
 class AccountListView(LoginRequiredMixin, ListView):
     model = Account
-    template_name = ("receipts/accounts.html")
+    template_name = ("accounts/list.html")
     def get_queryset(self):
-        return Receipt.objects.filter(purchaser=self.request.user)
+        return Account.objects.filter(owner=self.request.user)
 
 class ExpenseCategoryListView(LoginRequiredMixin, ListView):
     model = ExpenseCategory
-    template_name = ("receipts/categories.html")
+    template_name = ("categories/list.html")
     def get_queryset(self):
-        return Receipt.objects.filter(purchaser=self.request.user)
+        return ExpenseCategory.objects.filter(owner=self.request.user)
