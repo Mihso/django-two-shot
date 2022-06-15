@@ -13,6 +13,9 @@
             <th>Account</th>
         </thead>
         <tbody>
+            <div>
+                <a href="{% url 'create_category' %}">Create Categories</a>
+            </div>
             {% for receipt in receipt_list%}
             <tr>
                 <td>
