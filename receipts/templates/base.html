@@ -1,36 +1,52 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
 <head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title></title>
     <nav>
         <ul>
-            {% if user.is_authenticated %}
-            <li><a href="{% url 'logout' %}">Logout</a></li>
-            {% else %}
-            <li><a href="{% url 'login' %}">Login</a></li>
-            <li><a href="{% url 'signup' %}">Sign Up</li>
-            {% endif %}
-            {% if user.is_authenticated %}
-            <li>
-                <a href="{% url 'home' %}">View Receipts</a>
-            </li>
-            <li>
-                <a href="{% url 'create_receipt' %}">Create Receipt</a>
-            </li>
-            <li>
-                <a href="{% url 'create_category' %}">Create Categories</a>
-            </li>
-            <li>
-                <a href="{% url 'list_categories' %}">View Categories</a>
-            </li>
-            <li>
-                <a href="{% url 'create_account' %}">Create Account</a>
-            </li>
-            <li>
-                <a href="{% url 'account' %}">View Account</a>
-            </li>
-            {% endif %}
+            <table>
+                <tbody>
+                    <td>
+                        {% if user.is_authenticated %}
+                        <li><a href="{% url 'logout' %}">Logout</a></li>
+                        {% else %}
+                        <li><a href="{% url 'login' %}">Login</a></li>
+                        <li><a href="{% url 'signup' %}">Sign Up</li>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if user.is_authenticated %}
+                    <td>
+                        <li>
+                            <a href="{% url 'home' %}">View Receipts</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'create_receipt' %}">Create Receipt</a>
+                        </li>
+                    </td>
+                    <td>
+                        <li>
+                            <a href="{% url 'create_category' %}">Create Categories</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'list_categories' %}">View Categories</a>
+                        </li>
+                    </td>
+                    <td>
+                        <li>
+                            <a href="{% url 'create_account' %}">Create Account</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'account' %}">View Account</a>
+                        </li>
+                    </td>
+                    {% endif %}
+                    </td>
+                </tbody>
+            </table>
         </ul>
     </nav>
 </head>
