@@ -11,6 +11,20 @@
             <li><a href="{% url 'login' %}">Login</a></li>
             <li><a href="{% url 'signup' %}">Sign Up</li>
             {% endif %}
+            {% if user.is_authenticated %}
+            <li>
+                <a href="{% url 'create_category' %}">Create Categories</a>
+            </li>
+            <li>
+                <a href="{% url 'list_category' %}">View Categories</a>
+            </li>
+            <li>
+                <a href="{% url 'create_account' %}">Create Account</a>
+            </li>
+            <li>
+                <a href="{% url 'account' %}">View Account</a>
+            </li>
+            {% endif %}
         </ul>
     </nav>
 </head>
