@@ -13,10 +13,16 @@
             {% endif %}
             {% if user.is_authenticated %}
             <li>
+                <a href="{% url 'home' %}">View Receipts</a>
+            </li>
+            <li>
+                <a href="{% url 'create_receipt' %}">Create Receipt</a>
+            </li>
+            <li>
                 <a href="{% url 'create_category' %}">Create Categories</a>
             </li>
             <li>
-                <a href="{% url 'list_category' %}">View Categories</a>
+                <a href="{% url 'list_categories' %}">View Categories</a>
             </li>
             <li>
                 <a href="{% url 'create_account' %}">Create Account</a>
