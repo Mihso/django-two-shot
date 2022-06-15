@@ -8,4 +8,4 @@ class ReceiptListView(LoginRequiredMixin, ListView):
     model = Receipt
     template_name = ("receipts/list.html")
     def get_queryset(self):
-        return Receipt.objects.filter(purchaser=self.user)
+        return Receipt.objects.filter(purchaser=self.request.user)
