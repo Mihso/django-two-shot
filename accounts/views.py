@@ -29,7 +29,7 @@ def practice(request):
         "numby" : dabadoo,
     }
 
-    response = render(request, "accounts/list.html", context)
+    response = render(request, "accounts/list2.html", context)
 
     return response
             

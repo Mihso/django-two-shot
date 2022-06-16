@@ -1,14 +1,20 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
 
-{% block content %}
-<main>
-    <div class="narrow-form">
-        <h1>Login</h1>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button>Login</button>
-        </form>
-    </div>
-</main>
-{% endblock content %}
+<head>
+    <title></title>
+</head>
+
+<body>
+    <main>
+        <div class="narrow-form">
+            <h1>Login</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button>Login</button>
+            </form>
+        </div>
+    </main>
+</body>
+</htm>

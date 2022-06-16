@@ -10,6 +10,13 @@ body {
     border-width: 5px;
     border-inline-color: black;
     text-indent: 10px;
+    text-shadow: #208ACC;
+}
+
+h1 {
+    text-shadow: #208ACC;
+    color: azure;
+    text-rendering: geometricPrecision;
 }
 
 input {
