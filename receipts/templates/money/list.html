@@ -2,20 +2,18 @@
 
 {% block content %}
 <main>
-    <h1>Expense Categories</h1>
+    <h1>Secret Money</h1>
     <div>
-        <a href="{% url 'create_category' %}">Create Categories</a>
     </div>
     <table>
         <thead>
-            <th>Name</th>
-            <th>Number of receipts</th>
+            <th>Dollar</th>
         </thead>
         <tbody>
-            {% for money in money_list%}
+            {% for category in money_list%}
             <tr>
                 <td>
-                    {{ money.cash }}
+                    {{ category.cash }}
                 </td>
             </tr>
             {% endfor %}

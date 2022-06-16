@@ -43,3 +43,6 @@ class Receipt(models.Model):
         on_delete=models.CASCADE, 
         null = True,
     )
+
+class Money(models.Model):
+    cash = models.DecimalField(decimal_places= 2, max_digits=10)
