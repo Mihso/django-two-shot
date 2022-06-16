@@ -12,11 +12,12 @@
             <th>Number of receipts</th>
         </thead>
         <tbody>
-            {% for money in money_list%}
+            {% for category in expensecategory_list%}
             <tr>
                 <td>
-                    {{ money.cash }}
+                    {{ category.name }}
                 </td>
+                <td>{{ category.receipts.all|length }}</td>
             </tr>
             {% endfor %}
         </tbody>

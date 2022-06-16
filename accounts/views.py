@@ -3,6 +3,7 @@ from django.views.generic.list import ListView
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm 
 from django.contrib.auth import login
+from receipts.models import Receipt
 # Create your views here.
 def signup(request):
     if request.method == "POST":
@@ -16,4 +17,19 @@ def signup(request):
         form = UserCreationForm()
     context = {"form" : form,}
     return render(request, "registration/signup.html", context)
+
+def practice(request):
+    list = Receipt.objects.all()
+    dabadoo = []
+    for l in range(0, 10):
+        dabadoo.append("horse")
+    print("fish")
+    context = {
+        "practices_list": list,
+        "numby" : dabadoo,
+    }
+
+    response = render(request, "accounts/list.html", context)
+
+    return response
             
